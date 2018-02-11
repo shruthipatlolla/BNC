@@ -1,0 +1,75 @@
+body {
+    background-image: url("bg1.jpg");
+}
+article {
+    background-color: #ff8080;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: center;
+}
+header {
+    background-color: #5c8a8a;
+	font-family: verdana;
+	font-size: 22px;
+	text-align: center;
+	text-shadow: 2px 2px 5px red;	
+    background-color: lightgrey;
+    width: 500px;
+    border: 10px #cc9900;
+    padding: 5px;    
+	margin-left: auto;
+	margin-right: auto;
+	border-style: outset;
+}
+footer {
+    background-color: #00ff80;
+	font-family: Georgia;
+	font-size: 20px;
+	color: black;
+	font-style: oblique;
+	text-align: center;
+}
+
+.section-header{
+    background-color: #66ffb3;
+	font-family: verdana;
+	font-style: italic;
+	text-align: center;
+}
+.aside-header{
+	    background-color: #ffbb33;
+		font-family: verdana;
+		font-style: italic;
+		text-align: center;
+}
+ul li {
+    font-size: 20px;
+}
+p{
+    font-size: 20px;
+}
+table, th, td {
+    border: 1px solid rgb(19, 3, 7);
+    
+}
+input[type=number] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(227, 231, 233);
+    
+}
+.button {
+    background-color: rgb(170, 56, 94); /* Green */
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+	

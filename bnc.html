@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <title>Bull n Cows </title>
+        <link rel="stylesheet" href="bnc.css">
+        </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="tablinks" onclick="location.href='home.html'">Home</button>
+        <button class="tablinks" onclick="location.href='bnc.html'">BNC</button>
+    <button class="tablinks" onclick="location.href='Contact.html'">Contact</button>
+
+        </nav>
+  <article>
+    <section><header class="section-header">Bulls N Cows</header>
+    <p>
+    Bulls and cows is a mind game to guess the random generated number with some Hints.
+    </p></section>
+   </article>
+<p id="pTag"></p>
+<div style="width: 50%; float:left">
+    
+ 
+<form action="javascript:getBNc()">
+    Enter a 4 digit number:<br>
+    <input type="number" name="number"  min='1000' max="9999" id="number" value="1234">
+    <br>
+    
+    <input type="submit" value="Submit" class="button button1">
+  </form> 
+  <table  id="myTable">
+    <tr>
+      <th>Number Entered</th>
+      <th>Bulls</th>
+      <th>Cows</th>
+    </tr>
+    
+    <tr>
+      <td></td>
+      <th></td>
+      <td></td>
+    </tr>
+  </table>
+ </div>
+ <div style="width: 50%; float:right">
+    <p><b>No of Players:</b><br> One <br><b>Description:</b><br>
+      Computer selects a four digit number, all four digits are different. In current implementation number may not begin with 0.<br>
+       Any number can be guessed in 7 tries or less. <br>
+       "Cow" column displays total number of digits you guessed right - "Cow", "Cow" shows how many of those that exists were placed at the right spots - "Bull".
+      <br>At each turn the Guesser tries a four digit number, <br>
+      and the Chooser says how close it is to the answer by giving:
+      <ul>
+          <li>The number of Bulls - digits correct in the right position.</li>
+          <li>The number of Cows - digits correct but in the wrong position.</li>
+        </ul>
+      </p>
+
+
+ </div>
+<script src="bnc.js"></script>
+</body>
+</html>

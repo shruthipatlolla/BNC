@@ -1,0 +1,46 @@
+body {
+    background-image: url("bg1.jpg");
+}
+
+input[type=text],textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(192, 153, 166);
+   
+}
+form {
+    text-align: center;
+    font-size:24px;
+}
+.button {
+    background-color: rgb(172, 117, 135); /* Green */
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#info{
+    text-align: center;
+    font-size:34px;
+    font-style: italic;
+ 
+}
+img {
+    
+    border-radius: 18px;
+   height: "30%";
+    width: 150px;
+}
+#container{width:60%;
+    margin-left: auto;
+    margin-right: auto;}
+#left{float:left;width:100px;}
+#right{float:right;width:100px;}
+#center{margin:0 auto;width:100px;}
