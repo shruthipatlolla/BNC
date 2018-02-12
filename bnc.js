@@ -1,6 +1,7 @@
 var levelSelected ;
 var randomValue ;
 var noOfDigits;
+var numberOfTrails = 0;
 
 function play(){
     $("#play").removeAttr("style").hide();
@@ -20,7 +21,7 @@ function selectLevel(selectValue) {
 }
   
   
-  function randomValue(){
+function randomValue(){
       if(levelSelected=="easy" ){
         noOfDigits = 2;
         return  Math.floor(Math.random()*90) + 10;
@@ -35,20 +36,9 @@ function selectLevel(selectValue) {
       }
   }
   
-  var numberOfTrails = 0;
-
-  function getBNc(){
-    var number = document.getElementById("number").value;
-    
-    
-    var randomNo = randomValue;
-     
-    var bulls = 0, cows = 0;
-    var tempRandomNumber = randomNo;
-    var tempEnteredNumber = number;
-   // if(form.isValid()){
-    numberOfTrails++;
-    //Checking for bulls
+  
+function getBulls(tempRandomNumber,tempEnteredNumber, noOfDigits){
+    var bulls = 0;
     for(var i=0;i<noOfDigits;i++){
         if(tempRandomNumber % 10 == tempEnteredNumber % 10) {
             bulls++;
@@ -59,11 +49,14 @@ function selectLevel(selectValue) {
         }
         tempRandomNumber = parseInt(tempRandomNumber / 10);
         tempEnteredNumber = parseInt(tempEnteredNumber / 10);
+        
     }
-    
-    //Checking for cows
-    var tempEnteredNumber = number ;
-    var tempRandomNumber = randomNo;
+    return bulls;
+  }
+
+
+function getCows(tempRandomNumber,tempEnteredNumber, noOfDigits){
+    var cows = 0;
     var randDigits = [], enteredDigits = [];
     for(var i = 0; i < noOfDigits; i++){
         enteredDigits.push(tempEnteredNumber % 10);
@@ -79,6 +72,37 @@ function selectLevel(selectValue) {
             cows++;
         }
     }
+    return cows;
+  }
+function isValid(number,noOfDigits){
+    if(number.toString().length == noOfDigits){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function getBNc(){
+    var number = document.getElementById("number").value;
+    
+    if(!isValid(number,noOfDigits)){
+        window.alert("please enter a "+noOfDigits+" digit number");
+    }
+    else{
+    var randomNo = randomValue;
+    var tempRandomNumber = randomNo;
+    var tempEnteredNumber = number;
+   // if(form.isValid()){
+    numberOfTrails++;
+    //Checking for bulls
+   var bulls = getBulls(tempRandomNumber,tempEnteredNumber,noOfDigits);
+    
+    //Checking for cows
+    
+    var tempEnteredNumber = number ;
+    var tempRandomNumber = randomNo;
+    var cows = getCows(tempRandomNumber,tempEnteredNumber,noOfDigits);
+    
     cows = cows - bulls;
     var values = new Array(3);
     values[0] = [number, bulls, cows];
@@ -91,4 +115,5 @@ function selectLevel(selectValue) {
     cell1.innerHTML = number;
     cell2.innerHTML = bulls;
     cell3.innerHTML = cows;
+    }
   }

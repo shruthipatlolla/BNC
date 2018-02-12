@@ -30,15 +30,29 @@ QUnit.test("Here's a test that should always pass", function (assert) {
     assert.ok(1 <= "3", "1<3 - the first agrument is 'truthy', so we pass!");
 });
 
-QUnit.test('Testing calculateSeats function with several sets of inputs', function (assert) {
-    assert.equal(getBNc(), 6, 'Tested with two relatively small positive numbers');
-    assert.equal(App.calculateSeats(-5, -5), 0, 'Tested with two negative numbers. Any arguments less than 1 will be set to 0.');
-    assert.equal(App.calculateSeats(100002, 200), 0, 'Tested with two relatively large numbers. Any arguments gretaer than 100 will be set to 0.');
+QUnit.test('Testing getBulls function with several sets of inputs', function (assert) {
+    assert.equal(getBulls(23, 63, 2), 1, 'Tested with two digit number and got correct number of bulls');
+    assert.equal(getBulls(234, 634, 3), 2, 'Tested with three digit number and got correct number of bulls');
+    assert.equal(getBulls(2345, 6347, 4), 2, 'Tested with four digit number and got correct number of bulls');
     
-    assert.throws(function () { App.calculateSeats(null); }, /The given argument is not a number/, 'Passing in null correctly raises an Error');
-        //throws( block                                    [, expected ] [, message ] ) 
-    assert.throws(function () { App.calculateSeats("test","test"); }, /The given argument is not a number/, 'Passing in a string correctly raises an Error');
-    assert.throws(function () {App.calculateSeats(3.4, 2.8);},  /The given argument is not an integer/, 'Passing in floats correctly rauses Error');
-        
+    
 });
+
+QUnit.test('Testing getCows function with several sets of inputs', function (assert) {
+    assert.equal(getCows(45, 54, 2), 2, 'Tested with two digit number and got correct number of cows.');
+    assert.equal(getCows(456, 543, 3), 2, 'Tested with three digit number and got correct number of cows.');
+    assert.equal(getCows(4567, 5743, 4), 3, 'Tested with four digit number and got correct number of cows.');
+
+    
+    
+});
+
+QUnit.test('Testing isValid function with several sets of inputs', function (assert) {
+    assert.equal(isValid(12, 2), true, 'Tested with two digit number. Any argument with two digits will return true.');
+    assert.equal(isValid(123, 24), false, 'Tested with three digit number. Any argument which is not a three digits will return false.');
+    
+    
+});
+
+
 
