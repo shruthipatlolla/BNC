@@ -7,6 +7,29 @@ article {
 	font-size: 16px;
 	text-align: center;
 }
+#level{
+    display: none;
+    width: 100%;
+}
+#formIn{
+    display: none;  
+}
+.list_side{
+    display: inline-block;
+}
+#title_bar{
+    background-color: #ff8080;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: center; 
+}
+.img-circle {
+    border-radius: 50%;
+    height: "50%";
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
 header {
     background-color: #5c8a8a;
 	font-family: verdana;

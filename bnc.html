@@ -2,16 +2,29 @@
 <html>
     <head> 
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Bull n Cows </title>
         <link rel="stylesheet" href="bnc.css">
         </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="tablinks" onclick="location.href='home.html'">Home</button>
-        <button class="tablinks" onclick="location.href='bnc.html'">BNC</button>
-    <button class="tablinks" onclick="location.href='Contact.html'">Contact</button>
 
-        </nav>
+    
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" >BullS aNd CowS</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active">
+                    <button class="tablinks" onclick="location.href='home.html'">Home</button></li>
+                <li><button class="tablinks" onclick="location.href='bnc.html'">BNC</button></li>
+                <li><button class="tablinks" onclick="location.href='Contact.html'">Contact</button></li> 
+              </ul>
+            </div>
+          </nav>
   <article>
     <section><header class="section-header">Bulls N Cows</header>
     <p>
@@ -19,12 +32,26 @@
     </p></section>
    </article>
 <p id="pTag"></p>
-<div style="width: 50%; float:left">
+
+<img src="play.png" onclick="play()" id="play">
+<div id="level" style="width: 60%; float:left">
+  <div class ="list_side" >
+  <img src="easy_img.png" class="img-circle" onclick="selectLevel(this)" id="easy" value="1">
+  
+</div>
+  <div class ="list_side">
+  <img src="medium_img.jpg" class="img-circle" onclick="selectLevel(this)" id="medium" value="2">
+  </div>
+  <div class ="list_side">
+  <img src="hard_img.png" class="img-circle" onclick="selectLevel(this)" id="hard" value="3">
+  </div>
+</div>
+<div id="formIn" style="width: 50%; float:left">
     
  
-<form action="javascript:getBNc()">
-    Enter a 4 digit number:<br>
-    <input type="number" name="number"  min='1000' max="9999" id="number" value="1234">
+<form action="javascript:getBNc()" >
+    <div id="digits">Enter a 4 digit number:</div><br>
+    <input type="number" name="number"  id="number" required="true">
     <br>
     
     <input type="submit" value="Submit" class="button button1">
@@ -43,7 +70,7 @@
     </tr>
   </table>
  </div>
- <div style="width: 50%; float:right">
+ <div style="width: 40%; float:right">
     <p><b>No of Players:</b><br> One <br><b>Description:</b><br>
       Computer selects a four digit number, all four digits are different. In current implementation number may not begin with 0.<br>
        Any number can be guessed in 7 tries or less. <br>

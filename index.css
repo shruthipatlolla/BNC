@@ -15,7 +15,7 @@ body {
     background-image: url("bg1.jpg");
 }
 article {
-    background-color: #a17272;
+    background-color: #b44f4f;
 	font-family: verdana;
 	font-size: 16px;
     text-align: center;
@@ -23,6 +23,9 @@ article {
     width: 70%;
     display: block;
     margin: 0 auto;
+}
+a{
+    background-color: #292020;
 }
 #container{width:60%;
     margin-left: auto;

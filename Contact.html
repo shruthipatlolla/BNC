@@ -1,21 +1,33 @@
 <html>
     
     <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Contact Info</title>
         <link rel="stylesheet" href="contact.css">
         
     </head>
     <body>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="tablinks" onclick="location.href='home.html'">Home</button>
-                    <button class="tablinks" onclick="location.href='bnc.html'">BNC</button>
-                <button class="tablinks" onclick="location.href='Contact.html'">Contact</button>
-            
-                    </nav>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" >BullS aNd CowS</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active">
+                            <button class="tablinks" onclick="location.href='home.html'">Home</button></li>
+                        <li><button class="tablinks" onclick="location.href='bnc.html'">BNC</button></li>
+                        <li><button class="tablinks" onclick="location.href='Contact.html'">Contact</button></li> 
+                      </ul>
+                    </div>
+                  </nav>
             <div >
           <form action="">
                 Inbox me your queries:<br>
-                Email ID:<input type="text" name="email"  id="email" value="please enter your Email ID">
+                Email ID:<input type="text" name="email"  id="email" placeholder="please enter your Email ID">
                 <br>
                 Question :<textarea name="text_area" value="write your query"></textarea>
                 <br>
